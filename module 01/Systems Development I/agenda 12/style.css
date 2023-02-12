@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(239, 239, 239);
+    margin-top: 9rem;
+}
+
+.title h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.sites {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sites img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* spotify */
+
+.spotify {
+    width: 5rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.spotify a {
+    text-decoration: none;
+}
+
+/* netlix */
+
+.netlix {
+    width: 7rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.netlix a {
+    text-decoration: none;
+}
+
+/* twitter */
+
+.twitter {
+    width: 5rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.twitter a {
+    text-decoration: none;
+}
+
+/* fiap */
+
+.fiap {
+    width: 5rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.fiap a {
+    text-decoration: none;
+}
+
+/* duolingo */
+
+.duolingo {
+    width: 5rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.duolingo a { 
+    text-decoration: none;
+}
+

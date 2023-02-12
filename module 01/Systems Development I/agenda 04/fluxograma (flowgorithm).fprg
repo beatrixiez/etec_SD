@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-04 11:23:33 "/>
+        <attribute name="created" value="QmlhO0xBUFRPUC01T0RGVkVMVjsyMDIyLTA5LTA0OyIxMDowOToxNCAiOzI1NTM="/>
+        <attribute name="edited" value="QmlhO0xBUFRPUC01T0RGVkVMVjsyMDIyLTA5LTA0OyIxMToyMzozMyAiOzE7MjY1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sudeste, sul, centroOeste, nordeste, norte, brasil" type="Integer" array="False" size=""/>
+            <declare name="percentualSudeste, percentualSul, percentualCentroOeste, percentualNordeste, percentualNorte" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite o n&#250;mero de casos da regi&#227;o Sudeste:&quot;" newline="True"/>
+            <input variable="sudeste"/>
+            <output expression="&quot;Digite o n&#250;mero de casos da regi&#227;o Sul:&quot;" newline="True"/>
+            <input variable="sul"/>
+            <output expression="&quot;Digite o n&#250;mero de casos da regi&#227;o Centro-Oeste:&quot;" newline="True"/>
+            <input variable="centroOeste"/>
+            <output expression="&quot;Digite o n&#250;mero de casos da regi&#227;o Nordeste:&quot;" newline="True"/>
+            <input variable="nordeste"/>
+            <output expression="&quot;Digite o n&#250;mero de casos da regi&#227;o Norte:&quot;" newline="True"/>
+            <input variable="norte"/>
+            <assign variable="brasil" expression="sudeste + sul + centroOeste + nordeste + norte"/>
+            <assign variable="percentualSudeste" expression="(sudeste * 100) / brasil"/>
+            <assign variable="percentualSul" expression="(sul * 100) / brasil"/>
+            <assign variable="percentualCentroOeste" expression="(centroOeste * 100) / brasil"/>
+            <assign variable="percentualNordeste" expression="(nordeste * 100) / brasil"/>
+            <assign variable="percentualNorte" expression="(norte * 100) / brasil"/>
+            <output expression="&quot;N&#250;mero de casos no Brasil: &quot; &amp; brasil &amp; &quot;. Percentual: 100%&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de casos na regi&#227;o Sudeste: &quot; &amp; sudeste &amp; &quot;. Percentual: &quot; &amp; percentualSudeste &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de casos na regi&#227;o Sul: &quot; &amp; sul &amp; &quot;. Percentual: &quot; &amp; percentualSul &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de casos na regi&#227;o Centro-Oeste: &quot; &amp; centroOeste &amp; &quot;. Percentual: &quot; &amp; percentualCentroOeste &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de casos na regi&#227;o Nordeste: &quot; &amp; nordeste &amp; &quot;. Percentual: &quot; &amp; percentualNordeste &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de casos na regi&#227;o Norte: &quot; &amp; norte &amp; &quot;. Percentual: &quot; &amp; percentualNorte &amp; &quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
