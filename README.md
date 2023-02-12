@@ -1,1 +1,1 @@
-activities from systems development course at ETEC
+activities from ETEC systems development course 
