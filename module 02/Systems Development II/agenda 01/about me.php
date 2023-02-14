@@ -1,3 +1,3 @@
 <?php
-echo "Name: Beatriz Barreto, Age: 19, Profession: Developer";
+echo "Nome: Beatriz Barreto, <br> Idade: 19, <br> Profissão: Desenvolvedora";
 ?>
