@@ -1,0 +1,37 @@
+* {
+    background-color: #ccc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: 1rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    border: 2px solid #000;
+}
+
+button {
+    padding: 0.3rem;
+    background-color: #222;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer 
+}
+
+
+/* action.php */
+
+.validate {
+    margin-top: 1rem;
+}
