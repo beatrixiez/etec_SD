@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <title>GET e POST</title>
 
+    <?php
+    echo ''
+    ?>
+
   </head>
 
   <body>
