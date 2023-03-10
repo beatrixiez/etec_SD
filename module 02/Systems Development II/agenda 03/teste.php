@@ -1,7 +1,3 @@
 <?php
-<<<<<<< Updated upstream
-    echo 'olá'
-=======
-    echo 'olá novamente x3'
->>>>>>> Stashed changes
+    echo 'olá novamente x4'
     ?>
