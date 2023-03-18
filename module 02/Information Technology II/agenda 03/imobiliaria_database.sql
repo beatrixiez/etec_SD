@@ -8,7 +8,10 @@ CREATE TABLE condominio (
     bairro VARCHAR(30) NOT NULL,
     cidade VARCHAR(40) NOT NULL,
     uf VARCHAR(2) NOT NULL,
-    cep VARCHAR(9) NOT NULL
+    cep VARCHAR(9) NOT NULL,
+	matricula_cond INT UNSIGNED NOT NULL,
+    CONSTRAINT fk_cond_sind FOREIGN KEY (matricula_sind)
+        REFERENCES sindico (matricula)
 );
 
 CREATE TABLE apartamento (
@@ -43,10 +46,7 @@ CREATE TABLE sindico (
     cidade VARCHAR(40) NOT NULL,
     uf VARCHAR(2) NOT NULL,
     cep VARCHAR(9) NOT NULL,
-    telefone INT NOT NULL,
-    cod_cond INT UNSIGNED NOT NULL,
-    CONSTRAINT fk_sind_cond FOREIGN KEY (cod_cond)
-        REFERENCES condominio (codigo)
+    telefone INT NOT NULL
 );
 
 
