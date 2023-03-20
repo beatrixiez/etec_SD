@@ -23,6 +23,7 @@ CREATE TABLE condominio (
     bairro VARCHAR(30) NOT NULL,
     cidade VARCHAR(40) NOT NULL,
     uf VARCHAR(2) NOT NULL,
+<<<<<<< HEAD
     cep VARCHAR(9) NOT NULL
 =======
     codigo INT(5) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -32,6 +33,12 @@ CREATE TABLE condominio (
     CONSTRAINT matricula_sind FOREIGN KEY (matricula_sind)
         REFERENCES sindico (matricula)
 >>>>>>> Stashed changes
+=======
+    cep VARCHAR(9) NOT NULL,
+	matricula_cond INT UNSIGNED NOT NULL,
+    CONSTRAINT fk_cond_sind FOREIGN KEY (matricula_sind)
+        REFERENCES sindico (matricula)
+>>>>>>> 8523b71001cdb79b35843541ac6fed015dbd67d5
 );
 
 CREATE TABLE apartamento (
@@ -60,6 +67,7 @@ CREATE TABLE sindico (
     cidade VARCHAR(40) NOT NULL,
     uf VARCHAR(2) NOT NULL,
     cep VARCHAR(9) NOT NULL,
+<<<<<<< HEAD
     telefone INT NOT NULL,
     cod_cond INT UNSIGNED NOT NULL,
     CONSTRAINT fk_sind_cond FOREIGN KEY (cod_cond)
@@ -74,6 +82,9 @@ CREATE TABLE proprietario_apartamento (
 	CONSTRAINT rg_prop FOREIGN KEY (rg_prop)
         REFERENCES proprietario (rg)
 >>>>>>> Stashed changes
+=======
+    telefone INT NOT NULL
+>>>>>>> 8523b71001cdb79b35843541ac6fed015dbd67d5
 );
 
 
