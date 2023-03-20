@@ -1,6 +1,21 @@
 USE imobiliaria;
 
+CREATE TABLE sindico (
+    matricula INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(80),
+    endereco VARCHAR(80),
+    telefone VARCHAR(15)
+);
+
+CREATE TABLE proprietario (
+    rg VARCHAR(15) NOT NULL PRIMARY KEY,
+    nome VARCHAR(80),
+    telefone VARCHAR(15),
+    email VARCHAR(50)
+);
+
 CREATE TABLE condominio (
+<<<<<<< Updated upstream
     codigo INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(80) NOT NULL,
     logradouro VARCHAR(50) NOT NULL,
@@ -9,31 +24,33 @@ CREATE TABLE condominio (
     cidade VARCHAR(40) NOT NULL,
     uf VARCHAR(2) NOT NULL,
     cep VARCHAR(9) NOT NULL
+=======
+    codigo INT(5) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    endereco VARCHAR(80),
+	matricula_sind INT(3) UNSIGNED,
+    CONSTRAINT matricula_sind FOREIGN KEY (matricula_sind)
+        REFERENCES sindico (matricula)
+>>>>>>> Stashed changes
 );
 
 CREATE TABLE apartamento (
-    numero INT UNSIGNED NOT NULL PRIMARY KEY,
+    numero VARCHAR(5) NOT NULL PRIMARY KEY,
     tipo ENUM('Padrão', 'Cobertura'),
-    cod_cond INT UNSIGNED NOT NULL,
-    CONSTRAINT fk_apart_cond FOREIGN KEY (cod_cond)
+    codigo_cond INT(5) UNSIGNED,
+    CONSTRAINT codigo_cond FOREIGN KEY (codigo_cond)
         REFERENCES condominio (codigo)
 );
 
-CREATE TABLE proprietario (
-    rg INT UNSIGNED NOT NULL PRIMARY KEY,
-    nome VARCHAR(80) NOT NULL,
-    telefone INT NOT NULL,
-    email VARCHAR(50) NOT NULL
-);
-
 CREATE TABLE garagem (
-    numero INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    numero INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     tipo ENUM('Padrão', 'Coberta'),
-    num_apart INT UNSIGNED NOT NULL,
-    CONSTRAINT fk_garag_apart FOREIGN KEY (num_apart)
+    numero_ap VARCHAR(5),
+    CONSTRAINT numero_ap FOREIGN KEY (numero_ap)
         REFERENCES apartamento (numero)
 );
 
+<<<<<<< Updated upstream
 CREATE TABLE sindico (
     matricula INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(80) NOT NULL,
@@ -47,6 +64,16 @@ CREATE TABLE sindico (
     cod_cond INT UNSIGNED NOT NULL,
     CONSTRAINT fk_sind_cond FOREIGN KEY (cod_cond)
         REFERENCES condominio (codigo)
+=======
+CREATE TABLE proprietario_apartamento (
+    prop_ap_id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    numero_ap VARCHAR(5),
+	CONSTRAINT numero_ap FOREIGN KEY (numero_ap)
+        REFERENCES apartamento (numero),
+    rg_prop VARCHAR(15),
+	CONSTRAINT rg_prop FOREIGN KEY (rg_prop)
+        REFERENCES proprietario (rg)
+>>>>>>> Stashed changes
 );
 
 
